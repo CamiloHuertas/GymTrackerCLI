@@ -1,0 +1,26 @@
+{
+  "workouts": [
+    {
+      "name": "Primer workout",
+      "exercises": [
+        {
+          "name": "Primer ejercicio",
+          "sets": [
+            {
+              "reps": 1,
+              "peso": 50.0
+            },
+            {
+              "reps": 10,
+              "peso": 40.0
+            }
+          ]
+        },
+        {
+          "name": "Segundo Ejercicio",
+          "sets": []
+        }
+      ]
+    }
+  ]
+}
