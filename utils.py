@@ -1,6 +1,7 @@
 def show_main_menu():
   print("---------------------------------------")
   print("Bienvenido a tu Gym tracker")
+  print(" Elije una de las siguientes opciones:")
   print("---------------------------------------")
   print("1. Agregar Workout")
   print("2. Editar Workout")
@@ -12,26 +13,32 @@ def show_main_menu():
 # SHOW MENU FUNCTIONS
 
 def show_names_menu(prompt, data):
+    print("----------------------------------------------------")
     print(prompt)
+    print("----------------------------------------------------")
     for i, workout in enumerate(data):
       print(f"{i + 1}: {workout['name']}")
+    print(f"{i + 2}: Volver al menu anterior")
 
 
 def show_keys_menu(prompt, data):
+  print("---------------------------------------------------")
   print(prompt)
+  print("---------------------------------------------------")
   for i, key in enumerate(data):
     print(f"{i + 1}: {key}")
+  print(f"{i + 2}: Volver al menu anterior")
 
 # SELECT MENU OPTION FUNCTION
 
-def select_menu_option(max_option):
+def select_menu_option(min_option, max_option):
   while True:
     try:
       option = int(input("Selecciona una de las opciones disponibles: ")) 
-      if 1 <= option <= max_option:
+      if min_option <= option <= max_option:
         break
       else: 
-        print(f"Debe ser de 1 a {max_option}")
+        print(f"Debe ser de {min_option} a {max_option}")
     except ValueError:
       print("Debes ingresar un numero entero")
 
